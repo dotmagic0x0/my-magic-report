@@ -91,6 +91,12 @@
 </div>
 
 <script>
+// ページを開いた瞬間に合言葉を聞く
+const password = prompt("合言葉を入力してください");
+if (password !== "むぎ") {
+    alert("合言葉が違います");
+    document.body.innerHTML = "<h1>アクセス権限がありません</h1>";
+}
     // ページ読み込み時に文字を復元
     window.onload = () => {
         const savedText = localStorage.getItem('magicReport');
